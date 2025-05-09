@@ -1,15 +1,21 @@
-import {Routes} from '@angular/router';
-import {CampaignListComponent} from "./modules/campaign/campaign-list/campaign-list.component";
-import {LoginComponent} from "./modules/auth/login/login.component";
-import {authGuard} from "./core/Auth/auth.guard";
-
+import { Routes } from '@angular/router';
+import { CampaignListComponent } from './modules/campaign/campaign-list/campaign-list.component';
+import { LoginComponent } from './modules/auth/login/login.component';
+import { authGuard } from './core/Guard/auth.guard';
+import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
-        {
-        path: 'campaign',
-        component: CampaignListComponent,
+
+    {
+        path: '',
+        component: LayoutComponent,
         canActivate: [authGuard],
+        children: [
+            { path: '', redirectTo: 'campaign', pathMatch: 'full' },
+            { path: 'campaign', component: CampaignListComponent }
+        ]
     },
-    {path: '', redirectTo: '/login', pathMatch: 'full'},
-    {path: '**', redirectTo: '/login'}];
+
+    { path: '**', redirectTo: 'login' }
+];
