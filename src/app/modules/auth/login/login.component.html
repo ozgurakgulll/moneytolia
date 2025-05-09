@@ -1,1 +1,15 @@
-<p>login works!</p>
+<div class="login-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Kullanıcı Adı</label>
+      <input type="text" id="username" formControlName="username" />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Şifre</label>
+      <input type="password" id="password" formControlName="password" />
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Giriş Yap</button>
+  </form>
+</div>
