@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { LayoutModule } from './layout/layout.module';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     BrowserModule,
     RouterModule.forRoot(routes),
     LayoutModule,
+    SharedModule,
     FontAwesomeModule
   ],
   providers: [],

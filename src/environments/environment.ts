@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
   defaultUsername: 'admin',
-  defaultPassword: 'password123'
+  defaultPassword: 'admin'
 };
