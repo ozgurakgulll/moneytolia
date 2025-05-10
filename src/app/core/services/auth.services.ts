@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {UserModel} from '../Models/user.model';
+import {UserModel} from '../models/user.model';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,12 @@ export class AuthService {
 
   public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 
-  private readonly DEFAULT_USERNAME = 'admin';
+  private readonly DEFAULT_USERNAME = environment.defaultUsername;
 
-  private readonly DEFAULT_PASSWORD = 'password123';
+  private readonly DEFAULT_PASSWORD = environment.defaultPassword;
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router) {
+  }
 
   login(user: UserModel): boolean {
     if (user.username === this.DEFAULT_USERNAME && user.password === this.DEFAULT_PASSWORD) {

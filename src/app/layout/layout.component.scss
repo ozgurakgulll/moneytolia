@@ -1,15 +1,31 @@
 .layout-container {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 70px);
+  flex-direction: row;
+}
+
+app-sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
 
   app-sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
+    width: 100%;
+    height: auto;
   }
 
   .content {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
+    padding: 10px;
   }
 }
