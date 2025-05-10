@@ -1,1 +1,17 @@
-<p>sidebar works!</p>
+<aside class="mon-sidenav" [class.open]="sidebarOpen">
+  <fa-icon  [icon]="faTimes" class="mon-times-icon" (click)="toggleSidebar()"></fa-icon>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/campaign-list" routerLinkActive="active" >
+          <span>Campaign List</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/campaign-create" routerLinkActive="active">
+          <span>Create Campaign</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>

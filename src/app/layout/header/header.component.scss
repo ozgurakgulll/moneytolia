@@ -1,4 +1,4 @@
-.header {
+.mon-header {
   background-color: #ffffff;
   color: #221f1f;
   text-align: center;
@@ -9,12 +9,14 @@
   height: 29px;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding:20px
+  padding: 20px
 }
-.logo {
+
+.mon-logo {
   font-weight: bold;
 }
-.logout-button {
+
+.mon-logout-button {
   background-color: #f44336;
   color: white;
   border: none;
@@ -25,6 +27,23 @@
   transition: background-color 0.3s;
 }
 
-.logout-button:hover {
+.mon-logout-button:hover {
   background-color: #d32f2f;
+}
+
+.mon-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.mon-sidebar-button {
+  visibility: hidden;
+  min-width: 20px;
+}
+
+@media (max-width: 768px) {
+  .mon-sidebar-button {
+    visibility: visible;
+    cursor: pointer;
+  }
 }

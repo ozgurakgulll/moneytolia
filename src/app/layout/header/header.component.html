@@ -1,4 +1,9 @@
-<div class="header">
-  <div class="logo">Moneytolia</div>
-  <button class="logout-button" (click)="onLogout()">Log out</button>
+<div class="mon-header">
+
+  <div class="mon-flex">
+    <fa-icon class="mon-sidebar-button" [icon]="faBars" (click)="toggleSidebar()"></fa-icon>
+    <div class="mon-logo">Moneytolia</div>
+  </div>
+
+  <button class="mon-logout-button" (click)="onLogout()">Log out</button>
 </div>

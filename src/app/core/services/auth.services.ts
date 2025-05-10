@@ -24,7 +24,7 @@ export class AuthService {
     if (user.username === this.DEFAULT_USERNAME && user.password === this.DEFAULT_PASSWORD) {
       localStorage.setItem('auth_token', 'logged_in');
       this.isAuthenticatedSubject.next(true);
-      this._router.navigate(['/campaigns']);
+      this._router.navigate(['/campaign-list']);
       return true;
     }
     return false;

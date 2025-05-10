@@ -20,18 +20,3 @@ export const authGuard: CanActivateFn = (route, state) => {
   );
 };
 
-export const loginGuard: CanActivateFn = (route, state) => {
-  const authService = inject(AuthService);
-  const router = inject(Router);
-
-  return authService.isLoggedIn().pipe(
-    map(isLoggedIn => {
-      if (isLoggedIn) {
-        router.navigate(['/campaigns']);
-        return false;
-      } else {
-        return true;
-      }
-    })
-  );
-};

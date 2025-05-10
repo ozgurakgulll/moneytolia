@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { LayoutModule } from './layout/layout.module';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { LayoutModule } from './layout/layout.module';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    LayoutModule
+    LayoutModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

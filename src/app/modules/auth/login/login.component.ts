@@ -34,7 +34,7 @@ export class LoginComponent {
         alert('Giriş bilgilerini kontrol ediniz');
       } else {
         alert('Başarılı bir şekilde giriş yapıldı');
-        this._router.navigate(['/campaign']);
+        this._router.navigate(['/campaign-list']);
       }
     }
   }

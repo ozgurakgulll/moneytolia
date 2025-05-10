@@ -5,6 +5,7 @@ import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {RouterModule, RouterOutlet} from '@angular/router';
+import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {RouterModule, RouterOutlet} from '@angular/router';
   imports: [
     CommonModule,
     RouterOutlet,
-    RouterModule
+    RouterModule,
+    FaIconComponent
   ],
   exports: [LayoutComponent]
 })

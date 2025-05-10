@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './campaign-list.component.html',
   styleUrl: './campaign-list.component.scss'
 })
-export class CampaignListComponent {
-
-}
+export class CampaignListComponent {}
